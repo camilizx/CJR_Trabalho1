@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+/*font-family: 'Montserrat', sans-serif;*/
+
+/* colors and images */
+:root {
+    --nav-links-color: #fff;
+    --button-hover-color: #878584;
+    --backoffice-menu-bg: #343a40;
+    --table-head-bg: #e9ecef;
+    --nav-link-hover-color: #f79800;
+    --footer-color: #e3e3e3;
+    --dark-layer: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6));
+    --edit-button-color: #ffa207;
+    --delete-button-color: #dc3545;
+    --pagination-active-bg: #007bff;
+    --header-bg-image: url(img_bg_backoffice_usuario.jpg);
+}
+
+* {
+    font-family:  'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+header {
+    background-image: var(--dark-layer), var(--header-bg-image);
+    background-size: cover;
+    background-position: center;
+    height: 45vh;
+    box-sizing: border-box;
+    color: var(--nav-links-color);
+    padding: 2% 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: var(--footer-color);
+    min-height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    margin-top: auto;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color:#fff;
+}
+  
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.cabecalho-menu-item:hover {
+    color: var(--nav-link-hover-color);
+}
+
+.menu {
+    background-color: var(--backoffice-menu-bg);
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    padding: 0.85% 5%;
+    font-size: 11px;
+}
+
+.edit_button {
+    background-color: #fff;
+    cursor: pointer;
+    color: var(--edit-button-color);
+    font-weight: bold;
+    padding-right: 1rem;
+}
+
+.edit_button:hover{
+    color: var(--button-hover-color);
+}
+
+.actions_buttons {
+    text-align: center;
+}
+
+.delete_button {
+    background-color: #fff;
+    cursor: pointer;
+    color: var(--delete-button-color);
+    font-weight: bold;
+}
+
+.delete_button:hover{
+    color: var(--button-hover-color);
+}
+
+main { 
+    padding: 0.8% 14%;
+    gap: 80px;
+}
+
+table {
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+
+thead {
+    background-color: var(--table-head-bg);
+    text-align: left;
+    height: 50px;
+}
+
+td {
+    padding: 0.5rem 1rem 0.5rem;
+    font-size: 17px;
+}
+
+th {
+    padding: 1rem;
+}
+
+/*.pagination {
+    display: flex;
+    margin: 1rem 36rem;
+}*/
+
+.pagination {
+    width: 250px;
+    margin: 1rem auto;
+}
+
+.pagination button {
+    color: black;
+    padding: 0.5rem 1rem;
+}
+
+.pagination button:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.pagination button:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.pagination button.active {
+    background-color: var(--pagination-active-bg);
+    color: white;
+}
+
+.pagination button:hover:not(.active) {
+    background-color: rgb(223, 219, 219);
+}
